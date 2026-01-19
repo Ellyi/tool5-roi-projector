@@ -110,8 +110,11 @@ def calculate_roi():
     # ROI calculation
     roi_percentage = ((annual_savings - implementation_cost) / implementation_cost) * 100
     
-    # Break-even calculation
-    breakeven_months = int((implementation_cost / annual_savings) * 12) if annual_savings > 0 else 999
+    # Break-even calculation (minimum 1 month, rounded)
+    if annual_savings > 0:
+        breakeven_months = max(1, round((implementation_cost / annual_savings) * 12))
+    else:
+        breakeven_months = 999
     
     # Risk assessment
     if automation_percentage > 0.8:
