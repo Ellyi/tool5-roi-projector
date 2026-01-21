@@ -1,7 +1,7 @@
 import psycopg2
 
 # Railway PostgreSQL public connection
-DATABASE_URL = "postgresql://postgres:dlkbpbLyksIHtZfLEicctAxjUncNTotr@metro.proxy.rlwy.net:14980/railway"
+DATABASE_URL = "postgresql://postgres:WXvYwLoctOEVbtRLMfHhUojztWLfDxEj@mainline.proxy.rlwy.net:29485/railway"
 
 print("Connecting to database...")
 conn = psycopg2.connect(DATABASE_URL)
